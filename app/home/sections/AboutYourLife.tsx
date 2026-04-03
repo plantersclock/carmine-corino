@@ -21,13 +21,13 @@ const AboutYourLife = () => {
         <div className="h-full container mx-auto">
           <div className="flex flex-col items-center justify-center h-full w-full">
             <h2 className="text-heading text-white">
-              This Isn't Just About Your Business.
+              This Isn&apos;t Just About Your Business.
             </h2>
             <h3 className="text-heading text-theme-blue-400">
-              It's About Your Life.
+              It&apos;s About Your Life.
             </h3>
             <p className="text-white text-smallersubheading text-center pt-12 pb-4 max-w-6xl">
-              Advisors think they're searching for better payouts, better
+              Advisors think they&apos;re searching for better payouts, better
               systems, better tools. What they’re actually searching for is:
             </p>
             <div className="grid grid-cols-5 gap-16 py-16">
@@ -82,7 +82,7 @@ const AboutYourLife = () => {
                 </p>
               </div>
             </div>
-            <p className="text-center text-body text-white max-w-4xl">
+            <p className="text-center text-body text-white max-w-4xl 2xl:max-w-6xl">
               Carmine works with advisors who feel held back—whether by the
               golden handcuffs of big banking or by the ceilings they’ve built
               for themselves. His financial advisor coaching helps them reignite

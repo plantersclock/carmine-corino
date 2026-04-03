@@ -13,7 +13,7 @@ const Footer = () => {
             {/* Logo & Info Column */}
             <div className="flex flex-col gap-6">
               <Image src={whiteLogo} alt="Carmine Corino" height={60} />
-              <p className="text-footerheading uppercase tracking-[0.25em] text-theme-blue-400 font-medium">
+              <p className="text-footerheading uppercase tracking-[0.25em] text-theme-blue-400 font-medium mt-4">
                 Redefining Financial Advisory
               </p>
               <div className="text-xs text-white/60">
