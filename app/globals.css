@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-blue-400: #d0f4f0;
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+}
+
+.text-heading {
+  @apply text-5xl xl:text-5xl 2xl:text-7xl font-semibold;
+}
+
+.text-subheading {
+  @apply text-4xl xl:text-4xl 2xl:text-6xl font-semibold;
+}
+
+.text-smallersubheading {
+  @apply text-3xl xl:text-3xl 2xl:text-5xl font-medium;
+}
+
+.text-icontext {
+  @apply text-base xl:text-lg 2xl:text-xl font-medium;
+}
+
+.text-body {
+  @apply text-lg 2xl:text-2xl;
+}

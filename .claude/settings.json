@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xxd /Users/matthew/Documents/WAM/carmine-corino/app/layout.tsx)",
+      "Bash(yarn add:*)",
+      "Bash(ls /Users/matthew/Documents/WAM/carmine-corino/tailwind.config* /Users/matthew/Documents/WAM/carmine-corino/postcss.config*)"
+    ]
+  }
+}
