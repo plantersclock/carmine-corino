@@ -24,6 +24,14 @@ body {
   @apply text-base xl:text-lg 2xl:text-xl font-medium;
 }
 
+.text-footerheading {
+  @apply text-base xl:text-lg 2xl:text-xl font-medium;
+}
+
+.text-footlinks {
+  @apply text-lg 2xl:text-2xl;
+}
+
 .text-body {
   @apply text-lg 2xl:text-2xl;
 }

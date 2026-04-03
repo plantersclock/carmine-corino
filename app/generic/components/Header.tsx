@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "@/app/generic/images/Logo.png";
 import GenericButton from "./GenericButton";
+import GradientBar from "./GradientBar";
 
 const Header = () => {
   return (
@@ -34,14 +35,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Gradient bar */}
-      <div
-        className="h-1"
-        style={{
-          background:
-            "linear-gradient(to right, #ca3e19 0%, #fb6938 20%, #c9c5cc 30%, #80c8c8 65%, #c9c5cc 70%, #595658 100%)",
-        }}
-      />
+      <GradientBar />
     </header>
   );
 };
