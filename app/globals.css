@@ -9,19 +9,19 @@ body {
 }
 
 .text-heading {
-  @apply text-5xl xl:text-5xl 2xl:text-7xl font-semibold;
+  @apply text-3xl lg:text-5xl xl:text-5xl 2xl:text-7xl font-semibold;
 }
 
 .text-subheading {
-  @apply text-4xl xl:text-4xl 2xl:text-6xl font-semibold;
+  @apply text-2xl lg:text-3xl xl:text-4xl 2xl:text-6xl font-semibold;
 }
 
 .text-smallersubheading {
-  @apply text-3xl xl:text-3xl 2xl:text-4xl font-medium;
+  @apply text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl font-medium;
 }
 
 .text-icontext {
-  @apply text-base xl:text-lg 2xl:text-xl font-medium;
+  @apply text-xl lg:text-base xl:text-lg 2xl:text-xl font-medium;
 }
 
 .text-footerheading {
@@ -33,5 +33,5 @@ body {
 }
 
 .text-body {
-  @apply text-lg 2xl:text-2xl;
+  @apply text-xl md:text-2xl lg:text-lg 2xl:text-2xl;
 }

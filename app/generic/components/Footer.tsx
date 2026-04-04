@@ -9,7 +9,7 @@ const Footer = () => {
       <GradientBar />
       <div className="bg-[#1c1b1a] pt-24 pb-32">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-[1fr_auto_auto_auto_auto] gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto_auto_auto] gap-10 lg:gap-12">
             {/* Logo & Info Column */}
             <div className="flex flex-col gap-6">
               <Image src={whiteLogo} alt="Carmine Corino" height={60} />

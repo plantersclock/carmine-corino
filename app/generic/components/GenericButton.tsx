@@ -43,7 +43,7 @@ const GenericButton = ({
       target={newTab ? "_blank" : undefined}
       rel={newTab ? "noopener noreferrer" : undefined}
       style={minWidth ? { minWidth } : undefined}
-      className="relative inline-flex items-center justify-center px-10 py-3"
+      className="relative inline-flex items-center justify-center px-5 py-3"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       whileTap={{ scale: 1.05 }}
@@ -58,15 +58,13 @@ const GenericButton = ({
         className="absolute inset-y-0 left-0 right-0 -skew-x-12 origin-bottom-right rounded-br-[2.5rem] bg-black"
         initial={false}
         animate={{
-          clipPath: hovered
-            ? "inset(0 0 0 0)"
-            : "inset(0 100% 0 0)",
+          clipPath: hovered ? "inset(0 0 0 0)" : "inset(0 100% 0 0)",
         }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       />
       {/* Default white text */}
       <motion.span
-        className="relative z-10 text-base 2xl:text-xl font-medium uppercase tracking-widest text-white"
+        className="relative z-10 text-base sm:text-xl 2xl:text-xl font-medium uppercase tracking-widest text-white"
         initial={false}
         animate={{ opacity: hovered ? 0 : 1 }}
         transition={{ duration: 0.25, ease: "easeInOut" }}
@@ -75,10 +73,14 @@ const GenericButton = ({
       </motion.span>
       {/* Gradient text that fades in on hover */}
       <motion.span
-        className={`absolute z-10 text-base 2xl:text-xl font-semibold uppercase tracking-widest text-transparent ${textGradientMap[color]}`}
+        className={`absolute z-10 text-base sm:text-xl 2xl:text-xl font-semibold uppercase tracking-widest text-transparent ${textGradientMap[color]}`}
         initial={false}
         animate={{ opacity: hovered ? 1 : 0 }}
-        transition={{ duration: 0.25, ease: "easeInOut", delay: hovered ? 0.15 : 0 }}
+        transition={{
+          duration: 0.25,
+          ease: "easeInOut",
+          delay: hovered ? 0.15 : 0,
+        }}
       >
         {text}
       </motion.span>
