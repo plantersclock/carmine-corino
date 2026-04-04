@@ -43,7 +43,7 @@ const Header = () => {
               >
                 Speaking
               </Link>
-              <GenericButton text="Contact" url="#" color="orange" />
+              <GenericButton text="Contact" url="/contact" color="orange" />
             </nav>
 
             {/* Hamburger Button (mobile) */}
@@ -145,7 +145,7 @@ const Header = () => {
                 <div onClick={closeMenu}>
                   <GenericButton
                     text="Contact"
-                    url="#"
+                    url="/contact"
                     color="orange"
                     minWidth="100%"
                   />

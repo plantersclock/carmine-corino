@@ -122,7 +122,7 @@ const Footer = () => {
                 Contact
               </h4>
               <Link
-                href="#"
+                href="/contact"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Reach Out

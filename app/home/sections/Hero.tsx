@@ -48,7 +48,7 @@ const Hero = () => {
                 their time, their families, and their future.
               </p>
               <GenericButtonGrid className="max-w-50 2xl:max-w-75">
-                <GenericButton text="Book A Call" url="#" />
+                <GenericButton text="Book A Call" url="/contact" />
                 <GenericButton text="Cornerstone" color="blue" url="#" />
               </GenericButtonGrid>
             </div>
@@ -102,7 +102,7 @@ const Hero = () => {
                   their time, their families, and their future.
                 </p>
                 <GenericButtonGrid className="max-w-75">
-                  <GenericButton text="Book A Call" url="#" />
+                  <GenericButton text="Book A Call" url="/contact" />
                   <GenericButton text="Cornerstone" color="blue" url="#" />
                 </GenericButtonGrid>
               </div>
