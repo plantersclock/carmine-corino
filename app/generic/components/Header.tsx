@@ -20,7 +20,13 @@ const Header = () => {
           <div className="container mx-auto flex items-center justify-between px-6 py-3 lg:py-6">
             {/* Logo */}
             <Link href="/" onClick={closeMenu}>
-              <Image src={logo} alt="Carmine Corino" height={40} className="lg:h-18.75 h-10 w-auto" priority />
+              <Image
+                src={logo}
+                alt="Carmine Corino"
+                height={40}
+                className="lg:h-18.75 h-10 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -110,7 +116,7 @@ const Header = () => {
               </div>
 
               {/* Menu Links */}
-              <nav className="flex flex-col gap-8 px-8 pt-4">
+              <nav className="flex flex-col gap-8 px-8 pt-4 flex-1">
                 <Link
                   href="/"
                   onClick={closeMenu}
@@ -132,14 +138,19 @@ const Header = () => {
                 >
                   Speaking
                 </Link>
-                <Link
-                  href="#"
-                  onClick={closeMenu}
-                  className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
-                >
-                  Contact
-                </Link>
               </nav>
+
+              {/* Contact Button & Bottom Gradient */}
+              <div className="px-8 pb-8">
+                <div onClick={closeMenu}>
+                  <GenericButton
+                    text="Contact"
+                    url="#"
+                    color="orange"
+                    minWidth="100%"
+                  />
+                </div>
+              </div>
             </motion.div>
           </>
         )}

@@ -10,7 +10,7 @@ import icon5 from "@/app/home/images/icon-5.png";
 
 const AboutYourLife = () => {
   return (
-    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-620 sm:h-600 lg:h-260 xl:h-250 2xl:h-350   -mt-64 z-30">
+    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-595 sm:h-600 lg:h-260 xl:h-250 2xl:h-350   -mt-64 z-30">
       <Image
         src={bgImage}
         alt="Meet Carmine Background"
@@ -27,14 +27,14 @@ const AboutYourLife = () => {
       />
       <div className=" h-[90%] relative z-40">
         <div className="h-full container mx-auto">
-          <div className="flex flex-col items-center justify-center h-full w-full">
+          <div className="flex flex-col items-center md:justify-center h-full w-full mt-18 md:mt-0">
             <h2 className="text-heading text-white text-center">
               This Isn&apos;t Just About Your Business.
             </h2>
             <h3 className="text-heading text-theme-blue-400 text-center">
               It&apos;s About Your Life.
             </h3>
-            <p className="text-white text-smallersubheading text-center pt-12 pb-4 max-w-4xl xl:max-w-6xl">
+            <p className="text-white text-smallersubheading text-center pt-12 pb-4 max-w-2xl lg:max-w-4xl xl:max-w-6xl">
               Advisors think they&apos;re searching for better payouts, better
               systems, better tools. What they’re actually searching for is:
             </p>
