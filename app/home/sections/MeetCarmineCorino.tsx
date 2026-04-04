@@ -8,7 +8,7 @@ import GenericButton from "@/app/generic/components/GenericButton";
 const MeetCarmineCorino = () => {
   return (
     <>
-      <div className="relative w-full aspect-1179/1066">
+      <div className="relative w-full aspect-1179/1066 lg:hidden">
         <Image
           src={bgImageMobile}
           alt="Meet Carmine Background"
