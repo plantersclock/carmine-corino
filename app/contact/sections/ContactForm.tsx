@@ -40,8 +40,10 @@ const ContactForm = () => {
         src={bgImage}
         alt="Contact background"
         fill
+
         className="object-cover"
         priority
+        placeholder="blur"
       />
       <div className="relative z-10 flex items-center justify-center min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 px-4">
         <div className="w-full max-w-2xl bg-white/40 backdrop-blur-sm p-8 lg:p-16">

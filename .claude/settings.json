@@ -4,7 +4,9 @@
       "Bash(xxd /Users/matthew/Documents/WAM/carmine-corino/app/layout.tsx)",
       "Bash(yarn add:*)",
       "Bash(ls /Users/matthew/Documents/WAM/carmine-corino/tailwind.config* /Users/matthew/Documents/WAM/carmine-corino/postcss.config*)",
-      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/home/images/meet-carmine-mobile.jpg)"
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/home/images/meet-carmine-mobile.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/book-hero-bg.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/hero-mobile-bg.png)"
     ]
   }
 }

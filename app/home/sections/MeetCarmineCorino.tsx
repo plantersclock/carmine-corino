@@ -13,6 +13,7 @@ const MeetCarmineCorino = () => {
           src={bgImageMobile}
           alt="Meet Carmine Background"
           fill
+
           className="object-contain object-top-left block lg:hidden"
           style={{
             maskImage:
@@ -31,6 +32,7 @@ const MeetCarmineCorino = () => {
           src={bgImage}
           alt="Meet Carmine Background"
           fill
+
           className="object-cover object-top-left hidden lg:block"
           priority
         />

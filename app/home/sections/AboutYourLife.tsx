@@ -15,6 +15,7 @@ const AboutYourLife = () => {
         src={bgImage}
         alt="Meet Carmine Background"
         fill
+
         className="object-cover object-bottom-left hidden lg:block"
         priority
       />
@@ -22,6 +23,7 @@ const AboutYourLife = () => {
         src={bgImageMobile}
         alt="Meet Carmine Background Mobile"
         fill
+
         className="object-cover object-bottom-left lg:hidden"
         priority
       />

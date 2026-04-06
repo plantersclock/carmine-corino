@@ -32,7 +32,7 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               <Link
-                href="#"
+                href="/book"
                 className="text-base 2xl:text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
               >
                 Book

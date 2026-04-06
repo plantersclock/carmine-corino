@@ -16,8 +16,10 @@ const Hero = () => {
           src={heroImage}
           alt="Hero background"
           fill
+
           className="object-cover object-top"
           priority
+          placeholder="blur"
         />
         <div className="relative z-10 flex items-center h-[88%] container mx-auto">
           <div className="absolute bottom-0 left-0 w-full">
@@ -62,8 +64,10 @@ const Hero = () => {
             src={heroImageMobile}
             alt="Hero background"
             fill
+  
             className="object-cover object-top"
             priority
+            placeholder="blur"
           />
         </div>
         <div className=" relative z-20 w-full h-180 sm:h-200  max-h-[110vh] -mt-35">
@@ -71,8 +75,10 @@ const Hero = () => {
             src={heroImageMobileBG}
             alt="Hero background"
             fill
+  
             className="object-cover object-top"
             priority
+            placeholder="blur"
           />
           <div className="relative z-10 flex h-[88%] container mx-auto px-6">
             <div className="absolute bottom-0 left-0 w-full">
