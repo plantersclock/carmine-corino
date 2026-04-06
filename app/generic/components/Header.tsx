@@ -38,7 +38,7 @@ const Header = () => {
                 Book
               </Link>
               <Link
-                href="#"
+                href="/speaking"
                 className="text-base 2xl:text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
               >
                 Speaking
@@ -132,7 +132,7 @@ const Header = () => {
                   Book
                 </Link>
                 <Link
-                  href="/"
+                  href="/speaking"
                   onClick={closeMenu}
                   className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
                 >

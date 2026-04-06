@@ -91,9 +91,9 @@ const Footer = () => {
 
             {/* Book Column */}
             <div className="flex flex-col gap-3">
-              <h4 className="text-footerheading uppercase tracking-widest text-white">
+              <Link href="/broken-dealer" className="text-footerheading uppercase tracking-widest text-white hover:text-white/80 transition-colors">
                 Book
-              </h4>
+              </Link>
               <Link
                 href="/broken-dealer"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
@@ -112,11 +112,11 @@ const Footer = () => {
 
             {/* Speaking Column */}
             <div className="flex flex-col gap-3">
-              <h4 className="text-footerheading font-bold uppercase tracking-widest text-white">
+              <Link href="/speaking" className="text-footerheading font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors">
                 Speaking
-              </h4>
+              </Link>
               <Link
-                href="#"
+                href="/speaking"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Select Your Experience
@@ -131,9 +131,9 @@ const Footer = () => {
 
             {/* Contact Column */}
             <div className="flex flex-col gap-3">
-              <h4 className="text-footerheading font-bold uppercase tracking-widest text-white">
+              <Link href="/contact" className="text-footerheading font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors">
                 Contact
-              </h4>
+              </Link>
               <Link
                 href="/contact"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"

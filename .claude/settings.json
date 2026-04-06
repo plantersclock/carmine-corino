@@ -12,7 +12,10 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/it-covers-everything-mobile-bg.png)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/it-covers-everything-bg.png)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/car-top-image*)",
-      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/hero-mobile-bg*)"
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/book/images/hero-mobile-bg*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/speaking/images/speaking-hero.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/speaking/images/speaking-hero-mobile.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/matthew/Documents/WAM/carmine-corino/app/speaking/images/book-carmine-bg.png)"
     ]
   }
 }

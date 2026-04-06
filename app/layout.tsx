@@ -25,7 +25,7 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} h-full antialiased w-full overflow-x-hidden overflow-y-auto bg-[#1C1C1A]`}
     >
-      <body className="min-h-full flex flex-col max-w-650 mx-auto overflow-hidden">
+      <body className="min-h-full flex flex-col max-w-650 mx-auto overflow-hidden" suppressHydrationWarning>
         <NextTopLoader color="#cc401a" showSpinner={false} />
         <Header />
         {children}
