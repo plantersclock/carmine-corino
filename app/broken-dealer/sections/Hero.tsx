@@ -15,7 +15,7 @@ const Hero = () => {
         priority
         placeholder="blur"
       />
-      <div className=" block lg:hidden relative aspect-1000/1070">
+      <div className="mt-4 block lg:hidden relative aspect-1000/1070">
         <Image
           src={heroImageMobile}
           alt="Hero background"

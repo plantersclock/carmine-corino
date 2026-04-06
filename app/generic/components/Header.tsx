@@ -125,14 +125,14 @@ const Header = () => {
                   Home
                 </Link>
                 <Link
-                  href="#"
+                  href="broken-dealer"
                   onClick={closeMenu}
                   className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
                 >
                   Book
                 </Link>
                 <Link
-                  href="/broken-dealer"
+                  href="/"
                   onClick={closeMenu}
                   className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
                 >
