@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import heroImage from "@/app/book/images/book-hero-bg.png";
-import heroImageMobile from "@/app/book/images/hero-mobile-bg.png";
+import heroImage from "@/app/broken-dealer/images/book-hero-bg.png";
+import heroImageMobile from "@/app/broken-dealer/images/hero-mobile-bg.jpg";
 import GenericButton from "@/app/generic/components/GenericButton";
 
 const Hero = () => {
   return (
-    <section className="block relative z-20 w-full aspect-1000/1880 lg:aspect-[2560/2066] max-h-screen bg-[#050505]">
+    <section className=" block relative z-20 w-full aspect-auto lg:aspect-[2560/2066] min-h-200 lg:max-h-screen bg-[#050505]">
       <Image
         src={heroImage}
         alt="Hero background"
@@ -15,18 +15,20 @@ const Hero = () => {
         priority
         placeholder="blur"
       />
-      <Image
-        src={heroImageMobile}
-        alt="Hero background"
-        fill
-        className="object-contain object-top block lg:hidden"
-        priority
-        placeholder="blur"
-      />
-      <div className="absolute top-0 left-0 w-full h-full">
+      <div className=" block lg:hidden relative aspect-1000/1070">
+        <Image
+          src={heroImageMobile}
+          alt="Hero background"
+          fill
+          className="object-contain object-top block lg:hidden"
+          priority
+          placeholder="blur"
+        />{" "}
+      </div>
+      <div className="relative bg-[#050505] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full">
         <div className="h-full grid lg:grid-cols-2 lg:gap-x-32 xl:gap-x-40 2xl:gap-x-58">
           <div></div>
-          <div className="flex flex-col justify-center  mt-24 sm:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto ">
+          <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto ">
             <div>
               <h2 className="text-white  text-heading max-w-xs md:max-w-md 2xl:max-w-2xl">
                 Wealth Management Books
@@ -38,8 +40,9 @@ const Hero = () => {
               <div className="max-w-60 mt-2">
                 <GenericButton
                   text="Buy Now"
-                  url="/book"
+                  url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
                   color="orange"
+                  newTab
                   minWidth="100%"
                 />
               </div>

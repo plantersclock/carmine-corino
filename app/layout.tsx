@@ -22,9 +22,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} h-full antialiased w-full overflow-x-hidden bg-[#1C1C1A]`}
+      className={`${outfit.variable} h-full antialiased w-full overflow-x-hidden overflow-y-auto bg-[#1C1C1A]`}
     >
-      <body className="min-h-full flex flex-col max-w-650 mx-auto overflow-x-hidden">
+      <body className="min-h-full flex flex-col max-w-650 mx-auto overflow-hidden">
         <Header />
         {children}
         <Footer />

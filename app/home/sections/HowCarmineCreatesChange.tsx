@@ -43,7 +43,7 @@ const HowCarmineCreatesChange = () => {
               way&mdash;without losing themselves in the process.
             </p>
             <div className="w-full self-end pt-4 lg:pt-0">
-              <GenericButton text="Read the Book" url="#" minWidth="100%" />
+              <GenericButton text="Read the Book" url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552" newTab minWidth="100%" />
             </div>
           </div>
 

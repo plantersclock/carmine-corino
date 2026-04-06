@@ -18,7 +18,18 @@ const Footer = () => {
               </p>
               <div className="text-xs text-white/60">
                 <p>&copy; Carmine Corino. All rights reserved.</p>
-                <p>Brand creative and website by <Link href="https://www.uncommoncrowd.com/" target="_blank" rel="noopener noreferrer" className="hover:text-[#fb6938] transition-colors">Uncommon Crowd</Link>.</p>
+                <p>
+                  Brand creative and website by{" "}
+                  <Link
+                    href="https://www.uncommoncrowd.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#fb6938] transition-colors"
+                  >
+                    Uncommon Crowd
+                  </Link>
+                  .
+                </p>
               </div>
               <div className="flex items-center gap-4 mt-2">
                 <span className="text-sm uppercase tracking-widest text-white font-medium">
@@ -84,13 +95,15 @@ const Footer = () => {
                 Book
               </h4>
               <Link
-                href="#"
+                href="/broken-dealer"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Broken Dealer
               </Link>
               <Link
-                href="#"
+                href="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Buy Now

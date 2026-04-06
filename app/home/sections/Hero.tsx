@@ -16,7 +16,6 @@ const Hero = () => {
           src={heroImage}
           alt="Hero background"
           fill
-
           className="object-cover object-top"
           priority
           placeholder="blur"
@@ -51,7 +50,12 @@ const Hero = () => {
               </p>
               <GenericButtonGrid className="max-w-50 2xl:max-w-75">
                 <GenericButton text="Book A Call" url="/contact" />
-                <GenericButton text="Cornerstone" color="blue" url="#" />
+                <GenericButton
+                  text="Cornerstone"
+                  color="blue"
+                  newTab
+                  url="https://www.cornerstoneplanninggroup.com/"
+                />
               </GenericButtonGrid>
             </div>
           </div>
@@ -64,7 +68,6 @@ const Hero = () => {
             src={heroImageMobile}
             alt="Hero background"
             fill
-  
             className="object-cover object-top"
             priority
             placeholder="blur"
@@ -75,7 +78,6 @@ const Hero = () => {
             src={heroImageMobileBG}
             alt="Hero background"
             fill
-  
             className="object-cover object-top"
             priority
             placeholder="blur"
@@ -109,7 +111,12 @@ const Hero = () => {
                 </p>
                 <GenericButtonGrid className="max-w-75">
                   <GenericButton text="Book A Call" url="/contact" />
-                  <GenericButton text="Cornerstone" color="blue" url="#" />
+                  <GenericButton
+                    text="Cornerstone"
+                    color="blue"
+                    newTab
+                    url="https://www.cornerstoneplanninggroup.com/"
+                  />
                 </GenericButtonGrid>
               </div>
             </div>

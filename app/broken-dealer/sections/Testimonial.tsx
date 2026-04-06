@@ -56,7 +56,7 @@ const Testimonial = () => {
   const t = testimonials[index];
 
   return (
-    <section className="relative w-full h-110 sm:h-140 lg:h-150 xl:h-195 2xl:h-210 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-25 sm:-mt-45 lg:-mt-30 2xl:-mt-35 z-30 bg-white">
+    <section className="relative w-full h-170 sm:h-170 lg:h-150 xl:h-165 2xl:h-190 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-10  lg:-mt-30 2xl:-mt-35 z-20 bg-white">
       <div className="h-[70%]  mx-auto px-6 flex flex-col items-center justify-center">
         <div className="relative w-full flex items-center justify-center">
           {/* Left Arrow */}
@@ -77,7 +77,7 @@ const Testimonial = () => {
           </button>
 
           {/* Testimonial Content */}
-          <div className="overflow-hidden w-full max-w-lg md::max-w-3xl lg:max-w-4xl pt-18">
+          <div className="overflow-hidden w-full max-w-xs sm:max-w-lg md::max-w-3xl lg:max-w-4xl pt-32 lg:pt-18">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={index}
@@ -110,7 +110,7 @@ const Testimonial = () => {
             className="absolute -right-6 z-10 flex items-center justify-center w-10 h-42 lg:w-14 lg:h-64 cursor-pointer"
             aria-label="Next testimonial"
           >
-            <div className="absolute inset-0 rounded-l-[2.5rem] bg-[#e7e7e7] hover:bg-[#c4c4c4]" />
+            <div className="absolute inset-0 rounded-l-[2.5rem] bg-[#e7e7e7] hover:bg-[#c4c4c4] opacity-90" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

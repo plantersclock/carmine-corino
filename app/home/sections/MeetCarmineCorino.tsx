@@ -57,7 +57,8 @@ const MeetCarmineCorino = () => {
                   <GenericButton
                     text="Read Broken Dealer"
                     color="gray"
-                    url="#"
+                    url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
+                    newTab
                   />
                   <div className="contents sm:hidden">
                     <GenericButton
