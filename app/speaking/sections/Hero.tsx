@@ -6,7 +6,7 @@ import GenericButton from "@/app/generic/components/GenericButton";
 
 const Hero = () => {
   return (
-    <section className=" block relative z-20 w-full aspect-auto lg:aspect-2560/1856 min-h-200 lg:max-h-screen bg-[#5b5a5a]">
+    <section className=" block relative z-20 w-full aspect-auto lg:aspect-2560/1856 min-h-200 lg:min-h-220 xl:min-h-260 2xl:min-h-380 lg:max-h-screen bg-[#5b5a5a]">
       <Image
         src={heroImage}
         alt="Hero background"
