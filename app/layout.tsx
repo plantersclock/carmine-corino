@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "./generic/components/Header";
 import Footer from "./generic/components/Footer";
+import NextTopLoader from "nextjs-toploader";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -25,6 +26,7 @@ export default function RootLayout({
       className={`${outfit.variable} h-full antialiased w-full overflow-x-hidden overflow-y-auto bg-[#1C1C1A]`}
     >
       <body className="min-h-full flex flex-col max-w-650 mx-auto overflow-hidden">
+        <NextTopLoader color="#cc401a" showSpinner={false} />
         <Header />
         {children}
         <Footer />
