@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       {/* DESKTOP */}
-      <section className="hidden lg:block relative z-20 w-full h-300 lg:h-230 xl:h-270 2xl:h-420 max-h-[110vh]">
+      <section className="hidden lg:block relative z-20 w-full h-300 lg:h-230 xl:h-270 2xl:h-420 max-h-[115vh] ">
         <Image
           src={heroImage}
           alt="Hero background"
@@ -42,7 +42,7 @@ const Hero = () => {
             <div></div>
             <div className="mx-auto w-full max-w-3xl lg:pl-12 xl:pl-22">
               <h2 className="text-heading text-white -mb-2">
-                Redefining Financial Advisory
+                Redefining <br /> Financial Advisory
               </h2>
               <p className="my-8 max-w-md 2xl:max-w-2xl text-body text-white/90">
                 Helping independent advisors create businesses that protect
@@ -63,7 +63,7 @@ const Hero = () => {
       </section>
       {/* Mobile */}
       <section className="block lg:hidden">
-        <div className="relative h-120 xs:h-150 sm:h-180 md:h-240 w-full">
+        <div className="relative w-full aspect-1179/1240">
           <Image
             src={heroImageMobile}
             alt="Hero background"
@@ -73,7 +73,7 @@ const Hero = () => {
             placeholder="blur"
           />
         </div>
-        <div className=" relative z-20 w-full h-180 sm:h-200  max-h-[110vh] -mt-35">
+        <div className=" relative z-20 w-full h-170 sm:h-200  max-h-[110vh] -mt-35">
           <Image
             src={heroImageMobileBG}
             alt="Hero background"
@@ -105,7 +105,7 @@ const Hero = () => {
                 <h2 className="text-heading text-white -mb-2">
                   Redefining Financial Advisory
                 </h2>
-                <p className="my-8  text-body text-white/90">
+                <p className="my-8  max-w-md text-body text-white/90">
                   Helping independent advisors create businesses that protect
                   their time, their families, and their future.
                 </p>

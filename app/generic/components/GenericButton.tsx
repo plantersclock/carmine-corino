@@ -9,15 +9,15 @@ const MotionLink = motion.create(Link);
 type GenericButtonColor = "orange" | "blue" | "gray";
 
 const bgColorMap: Record<GenericButtonColor, string> = {
-  orange: "bg-gradient-to-r from-[#ca3e19] to-[#fb6938]",
-  blue: "bg-gradient-to-r from-[#66a4a4] to-[#80c8c8]",
+  orange: "bg-gradient-to-r from-[#b33514] to-[#fa5e31]",
+  blue: "bg-gradient-to-r from-[#558b8b] to-[#75c1c0]",
   gray: "bg-gradient-to-r from-[#595658] to-[#c9c5cc]",
 };
 
 const textGradientMap: Record<GenericButtonColor, string> = {
   orange: "bg-gradient-to-r from-[#e04a1f] to-[#ff8040] bg-clip-text",
   blue: "bg-gradient-to-r from-[#55c8c8] to-[#90e8e8] bg-clip-text",
-  gray: "bg-gradient-to-r from-[#706d73] to-[#ddd8e0] bg-clip-text",
+  gray: "bg-gradient-to-r from-[#8C898D] to-[#ddd8e0] bg-clip-text",
 };
 
 interface GenericButtonProps {
@@ -43,7 +43,7 @@ const GenericButton = ({
       target={newTab ? "_blank" : undefined}
       rel={newTab ? "noopener noreferrer" : undefined}
       style={minWidth ? { minWidth } : undefined}
-      className="relative inline-flex items-center justify-center px-5 py-3"
+      className="relative inline-flex items-center justify-center px-5 py-2"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       whileTap={{ scale: 1.05 }}
@@ -64,7 +64,7 @@ const GenericButton = ({
       />
       {/* Default white text */}
       <motion.span
-        className="relative z-10 text-base sm:text-xl 2xl:text-xl font-medium uppercase tracking-widest text-white"
+        className="relative z-10 text-base sm:text-lg 5xl 2xl:text-lg font-medium uppercase tracking-wider text-white"
         initial={false}
         animate={{ opacity: hovered ? 0 : 1 }}
         transition={{ duration: 0.25, ease: "easeInOut" }}
@@ -73,7 +73,7 @@ const GenericButton = ({
       </motion.span>
       {/* Gradient text that fades in on hover */}
       <motion.span
-        className={`absolute z-10 text-base sm:text-xl 2xl:text-xl font-semibold uppercase tracking-widest text-transparent ${textGradientMap[color]}`}
+        className={`absolute z-10 text-base sm:text-lg 2xl:text-lg font-semibold uppercase tracking-wider text-transparent ${textGradientMap[color]}`}
         initial={false}
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{
