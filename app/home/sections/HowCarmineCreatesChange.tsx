@@ -8,9 +8,9 @@ import GenericButton from "@/app/generic/components/GenericButton";
 const HowCarmineCreatesChange = () => {
   return (
     <section className="relative w-full rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-35 z-30 bg-white">
-      <div className="container mx-auto px-6 py-18 md:py-24 xl:py-32">
+      <div className="container mx-auto px-20 py-18 md:py-24 xl:py-32">
         <h2 className="text-heading text-center">How Carmine Creates Change</h2>
-        <div className="grid max-w-sm mx-auto lg:max-w-none lg:grid-cols-3 gap-24 mt-16">
+        <div className="grid max-w-sm mx-auto lg:max-w-none lg:grid-cols-3 gap-24 xl:gap-x-32 mt-16 xl:mt-24">
           {/* Speaking Engagements */}
           <div className="grid lg:grid-rows-subgrid row-span-4 gap-4 items-start justify-items-center text-center">
             <Image
@@ -43,7 +43,12 @@ const HowCarmineCreatesChange = () => {
               way&mdash;without losing themselves in the process.
             </p>
             <div className="w-full self-end pt-4 lg:pt-0">
-              <GenericButton text="Read the Book" url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552" newTab minWidth="100%" />
+              <GenericButton
+                text="Read the Book"
+                url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
+                newTab
+                minWidth="100%"
+              />
             </div>
           </div>
 
@@ -55,7 +60,7 @@ const HowCarmineCreatesChange = () => {
               className="w-full rounded-full"
             />
             <h3 className="text-smallersubheading mt-6">
-              Community &amp; Resources
+              Community + Resources
             </h3>
             <p className="text-body">
               Financial advisor coaching, tools, strategies, and conversations

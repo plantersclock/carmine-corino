@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import bgImage from "@/app/contact/images/contact-bg.jpg";
+import GenericButton from "@/app/generic/components/GenericButton";
 
 type InquiryType = "advisors" | "general";
 
@@ -16,7 +16,6 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
-  const [hovered, setHovered] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -40,23 +39,31 @@ const ContactForm = () => {
         src={bgImage}
         alt="Contact background"
         fill
-
         className="object-cover"
         priority
         placeholder="blur"
       />
       <div className="relative z-10 flex items-center justify-center min-h-screen pt-32 pb-16 lg:pt-40 lg:pb-24 px-4">
-        <div className="w-full max-w-2xl bg-white/40 backdrop-blur-sm p-8 lg:p-16">
+        <div className="w-full max-w-4xl bg-white/40 backdrop-blur-sm p-8 lg:px-24 lg:py-18">
           {/* Heading */}
           <div className="text-center mb-8">
             <h1 className="text-heading">Contact Me.</h1>
-            <p className="text-body mt-4">
-              Reach out. Ask the question.
-              <br />
-              Start the change.
-              <br />
-              The only thing missing is your first move.
-            </p>
+            <div className="flex justify-center">
+              {inquiryType === "advisors" ? (
+                <p className="text-body mt-4">
+                  Reach out. Ask the question.
+                  <br />
+                  Start the change.
+                  <br />
+                  The only thing missing is your first move.
+                </p>
+              ) : (
+                <p className="text-body mt-4 max-w-xs">
+                  Use the form to reach out for press, podcast appearances, or
+                  general questions.
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Toggle */}
@@ -162,44 +169,12 @@ const ContactForm = () => {
             </div>
 
             {/* Submit Button */}
-            <motion.button
+            <GenericButton
+              text="Submit"
               type="submit"
-              className="relative inline-flex items-center justify-center px-10 py-3"
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              whileTap={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-            >
-              <div className="absolute inset-y-0 left-0 right-0 -skew-x-12 origin-bottom-right rounded-br-[2.5rem] bg-gradient-to-r from-[#ca3e19] to-[#fb6938]" />
-              <motion.div
-                className="absolute inset-y-0 left-0 right-0 -skew-x-12 origin-bottom-right rounded-br-[2.5rem] bg-black"
-                initial={false}
-                animate={{
-                  clipPath: hovered ? "inset(0 0 0 0)" : "inset(0 100% 0 0)",
-                }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
-              />
-              <motion.span
-                className="relative z-10 text-base sm:text-xl font-medium uppercase tracking-widest text-white"
-                initial={false}
-                animate={{ opacity: hovered ? 0 : 1 }}
-                transition={{ duration: 0.25, ease: "easeInOut" }}
-              >
-                Submit
-              </motion.span>
-              <motion.span
-                className="absolute z-10 text-base sm:text-xl font-semibold uppercase tracking-widest text-transparent bg-gradient-to-r from-[#e04a1f] to-[#ff8040] bg-clip-text"
-                initial={false}
-                animate={{ opacity: hovered ? 1 : 0 }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  delay: hovered ? 0.15 : 0,
-                }}
-              >
-                Submit
-              </motion.span>
-            </motion.button>
+              color="orange"
+              minWidth="160px"
+            />
           </form>
         </div>
       </div>

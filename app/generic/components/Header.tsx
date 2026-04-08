@@ -33,13 +33,13 @@ const Header = () => {
             <nav className="hidden lg:flex items-center gap-8">
               <Link
                 href="/broken-dealer"
-                className="text-base 2xl:text-lg font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
+                className="text-base  font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
               >
                 Book
               </Link>
               <Link
                 href="/speaking"
-                className="text-base 2xl:text-lg font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
+                className="text-base font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
               >
                 Speaking
               </Link>

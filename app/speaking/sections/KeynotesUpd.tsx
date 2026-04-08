@@ -84,7 +84,7 @@ const KeynotesUpd = () => {
   const k = keynotes[index];
 
   return (
-    <div className="bg-white pt-4 lg:-mt-50 relative z-40">
+    <div className="bg-white pt-4 lg:-mt-60 relative z-40">
       <section className="relative w-full bg-black rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] py-16 lg:py-24">
         {/* Header */}
         <div className="text-center lg:mb-18">
@@ -149,7 +149,7 @@ const KeynotesUpd = () => {
                   {/* Text */}
                   <div className="flex flex-col lg:w-1/2 px-4">
                     <h3 className="text-heading text-white">{k.title}</h3>
-                    <h4 className="text-subheading lg:text-smallersubheading text-white mt-4 ">
+                    <h4 className="text-smallersubheading lg:text-smallersubheading text-white mt-4 ">
                       {k.subtitle}
                     </h4>
                     <p className="text-body text-white mt-6">{k.description}</p>

@@ -5,7 +5,7 @@ import itCoversImage from "@/app/broken-dealer/images/it-covers-everything-bg.pn
 
 const ItCoversEverything = () => {
   return (
-    <section className="flex flex-col relative z-20 w-full aspect-1179/1730 lg:aspect-2560/2107 min-h-270 max-h-275 lg:max-h-350 -mt-20 sm:-mt-25 md:-mt-25 lg:-mt-65 2xl:-mt-35 bg-[#250F0F]">
+    <section className="flex flex-col relative z-30 w-full aspect-1179/1730 lg:aspect-2560/2107 min-h-270 max-h-275 lg:max-h-350 -mt-20 sm:-mt-25 md:-mt-25 lg:-mt-65 2xl:-mt-35 bg-[#250F0F]">
       <Image
         src={itCoversImage}
         alt="Chain background"

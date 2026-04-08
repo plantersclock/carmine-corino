@@ -5,17 +5,17 @@ import everythingImage from "@/app/broken-dealer/images/eveything-you-always-wan
 
 const EverythingYouAlwaysWanted = () => {
   return (
-    <section className="flex flex-col relative z-20 w-full  aspect-auto lg:aspect-2560/2137  sm:min-h-none  lg:min-h-300 lg:max-h-400  -mt-20 sm:-mt-25 lg:-mt-30 2xl:-mt-35 bg-white">
-      <Image
+    <section className="flex flex-col relative z-20 w-full  aspect-auto  sm:min-h-none -mt-20 sm:-mt-25 lg:-mt-30 2xl:-mt-35 bg-white">
+      {/* <Image
         src={everythingImage}
         alt="Everything you always wanted background"
         fill
         className="object-cover object-top-left hidden lg:block"
         priority
         placeholder="blur"
-      />
+      /> */}
 
-      <div className="block relative lg:hidden aspect-1179/518">
+      <div className="block relative z-20 aspect-1179/518">
         <Image
           src={everythingImageMobile}
           alt="Everything you always wanted background"
@@ -25,23 +25,29 @@ const EverythingYouAlwaysWanted = () => {
           placeholder="blur"
         />
       </div>
-      <div className="bg-[#250F0F] hidden lg:block grow mt-50 overflow-none "></div>
-      <div className="bg-[#250F0F] lg:bg-transparent block bg-black-auto lg:absolute h-full w-full lg:top-0 lg:left-0 pb-50">
-        <div className="container mx-auto h-full px-6">
-          <div className="grid lg:grid-cols-2 gap-y-0 gap-x-32 mt-0 lg:mt-[min(26vw,670px)] ">
-            <div>
-              <h2 className="text-heading text-white">
+
+      <div
+        className="block z-20 relative w-full pb-50 lg:pb-100 2xl:pb-70 pt-14 -mt-10"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent 0px, #250F0F 20px)",
+        }}
+      >
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-y-0 gap-x-32 mt-0  ">
+            <div className="">
+              <h2 className="text-heading text-white tracking-tight">
                 <span className="text-theme-orange-500">
                   Everything You Always Wanted To Know About Bolting the Big
                   Firm
                 </span>
               </h2>
-              <h3 className="text-heading text-white mt-1 lg:mt-2 mb-12">
+              <h3 className="text-heading text-white mt-1 lg:mt-2 mb-12 tracking-tight">
                 (But Were Afraid to Ask)
               </h3>
             </div>
             <div className="flex flex-col gap-6">
-              <h4 className="text-subheading text-white">
+              <h4 className="text-smallersubheading text-white">
                 Most financial advisors didn&apos;t sign up to be product
                 pushers.
               </h4>

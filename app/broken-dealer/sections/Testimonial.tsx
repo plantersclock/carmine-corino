@@ -77,7 +77,7 @@ const Testimonial = () => {
           </button>
 
           {/* Testimonial Content */}
-          <div className="overflow-hidden w-full max-w-xs sm:max-w-lg md::max-w-3xl lg:max-w-4xl pt-32 lg:pt-18">
+          <div className="overflow-hidden w-full max-w-xs sm:max-w-lg md::max-w-3xl lg:max-w-5xl pt-32 lg:pt-18">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={index}
@@ -95,11 +95,11 @@ const Testimonial = () => {
                   </span>
                   {t.heading.rest}
                 </h2>
-                <p className="text-body mt-8 max-w-2xl">{t.quote}</p>
+                <p className="text-body mt-8 ">{t.quote}</p>
                 <p className="text-body uppercase tracking-wider mt-8">
                   {t.author}
                 </p>
-                <p className="text-body mt-1">{t.role}</p>
+                <p className="text-body mt-1 italic">{t.role}</p>
               </motion.div>
             </AnimatePresence>
           </div>

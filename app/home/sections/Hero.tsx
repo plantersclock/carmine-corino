@@ -33,7 +33,7 @@ const Hero = () => {
               <p className="text-7xl xl:text-8xl 2xl:text-[9rem] font-bold">
                 Carmine Corino
               </p>
-              <p className="text-3xl xl:text-4xl 2xl:text-5xl font-medium">
+              <p className="text-3xl xl:text-4xl  font-medium">
                 ChFC®, AIF®, CFP®
               </p>
             </div>
@@ -44,7 +44,7 @@ const Hero = () => {
               <h2 className="text-heading text-white -mb-2">
                 Redefining <br /> Financial Advisory
               </h2>
-              <p className="my-8 max-w-md 2xl:max-w-2xl text-body text-white/90">
+              <p className="my-8 max-w-md 2xl:max-w-lg text-body text-white/90">
                 Helping independent advisors create businesses that protect
                 their time, their families, and their future.
               </p>

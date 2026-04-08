@@ -10,13 +10,15 @@ import icon5 from "@/app/home/images/icon-5.png";
 
 const AboutYourLife = () => {
   return (
-    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-595 sm:h-600 lg:h-260 xl:h-250 2xl:h-290   -mt-64 z-30">
-      <Image
-        src={bgImage}
-        alt="Meet Carmine Background"
-        fill
-        className="object-cover object-bottom-left hidden lg:block"
-        priority
+    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-510 sm:h-520 lg:h-260 xl:h-250 2xl:h-290   -mt-32 lg:-mt-64 z-30 mb-18">
+      <div
+        className="absolute inset-0 hidden lg:block"
+        style={{
+          backgroundImage: `url(${typeof bgImage === "string" ? bgImage : bgImage.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "bottom left",
+          backgroundAttachment: "fixed",
+        }}
       />
       <Image
         src={bgImageMobile}
@@ -27,7 +29,7 @@ const AboutYourLife = () => {
       />
       <div className=" h-[85%] relative z-40">
         <div className="h-full container mx-auto">
-          <div className="flex flex-col items-center md:justify-center h-full w-full mt-18 md:mt-0">
+          <div className="flex flex-col items-center md:justify-center h-full w-full mt-18  lg:mt-0">
             <h2 className="text-heading text-white text-center">
               This Isn&apos;t Just About Your Business.
             </h2>

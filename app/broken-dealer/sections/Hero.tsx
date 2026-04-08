@@ -6,7 +6,7 @@ import GenericButton from "@/app/generic/components/GenericButton";
 
 const Hero = () => {
   return (
-    <section className=" block relative z-20 w-full aspect-auto lg:aspect-[2560/2066] min-h-200 lg:max-h-screen bg-[#050505]">
+    <section className=" block relative z-20 w-full aspect-auto lg:py-18 lg:aspect-[2560/2066] min-h-200 lg:max-h-[120vh] bg-[#050505]">
       <Image
         src={heroImage}
         alt="Hero background"
@@ -31,7 +31,8 @@ const Hero = () => {
           <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto ">
             <div>
               <h2 className="text-white  text-heading max-w-xs md:max-w-md 2xl:max-w-2xl">
-                Wealth Management Books
+                The Wealth Management Book
+                <br /> That Changes Everything
               </h2>
               <p className="text-body text-white max-w-lg 2xl:max-w-2xl py-6 md:py-8">
                 <span className="text-theme-orange-500">Broken Dealer:</span>{" "}
@@ -39,7 +40,7 @@ const Hero = () => {
               </p>
               <div className="max-w-60 mt-2">
                 <GenericButton
-                  text="Buy Now"
+                  text="BUY ON AMAZON NOW"
                   url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
                   color="orange"
                   newTab
