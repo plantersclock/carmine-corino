@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import keynoteIcon1 from "@/app/speaking/images/keynote-icon-1.png";
+import GenericButton from "@/app/generic/components/GenericButton";
 
 interface Keynote {
   title: string;
@@ -65,6 +66,13 @@ const KeynotesUpd = () => {
     setDirection(dir);
     setIndex((prev) => (prev + dir + keynotes.length) % keynotes.length);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   const variants = {
     enter: (dir: number) => ({
@@ -146,6 +154,17 @@ const KeynotesUpd = () => {
                 transition={{ duration: 0.35, ease: "easeInOut" }}
               >
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                  {/* Icon */}
+                  <div className="lg:w-1/2 flex justify-center h-full">
+                    <Image
+                      src={k.icon}
+                      alt={k.title}
+                      width={400}
+                      height={400}
+                      className="w-48 lg:w-130 h-auto lg:scale-80"
+                    />
+                  </div>
+
                   {/* Text */}
                   <div className="flex flex-col lg:w-1/2 px-4">
                     <h3 className="text-heading text-white">{k.title}</h3>
@@ -170,18 +189,14 @@ const KeynotesUpd = () => {
                         {k.afterBullets}
                       </p>
                     )}
-                  </div>
-
-                  {/* Icon */}
-
-                  <div className="lg:w-1/2 flex justify-center order-first lg:order-last h-full">
-                    <Image
-                      src={k.icon}
-                      alt={k.title}
-                      width={400}
-                      height={400}
-                      className="w-48 lg:w-130 h-auto"
-                    />
+                    <div className="mt-8 max-w-70">
+                      <GenericButton
+                        text="Book This Keynote"
+                        url="/contact"
+                        color="orange"
+                        minWidth="100%"
+                      />
+                    </div>
                   </div>
                 </div>
               </motion.div>

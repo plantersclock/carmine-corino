@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
@@ -37,6 +37,13 @@ const Testimonial = () => {
       (prev) => (prev + dir + testimonials.length) % testimonials.length,
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   const variants = {
     enter: (dir: number) => ({

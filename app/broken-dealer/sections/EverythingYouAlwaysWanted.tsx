@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import everythingImageMobile from "@/app/broken-dealer/images/car-top-image.jpg";
-import everythingImage from "@/app/broken-dealer/images/eveything-you-always-wanted.png";
+import everythingImage from "@/app/broken-dealer/images/everything-you-always-wanted.jpg";
 
 const EverythingYouAlwaysWanted = () => {
   return (
@@ -15,9 +15,20 @@ const EverythingYouAlwaysWanted = () => {
         placeholder="blur"
       /> */}
 
-      <div className="block relative z-20 aspect-1179/518">
+      <div className="block lg:hidden relative z-20 aspect-1179/518">
         <Image
           src={everythingImageMobile}
+          alt="Everything you always wanted background"
+          fill
+          className="object-contain object-top-left "
+          priority
+          placeholder="blur"
+        />
+      </div>
+
+      <div className="hidden lg:block relative z-20 aspect-3704/1143 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden">
+        <Image
+          src={everythingImage}
           alt="Everything you always wanted background"
           fill
           className="object-contain object-top-left "

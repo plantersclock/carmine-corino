@@ -14,7 +14,7 @@ const MeetCarmineCorino = () => {
           src={bgImageMobile}
           alt="Meet Carmine Background"
           fill
-          className="object-contain object-top-left block lg:hidden"
+          className="object-contain object-top-left block lg:hidden "
           style={{
             maskImage:
               "linear-gradient(to bottom, black calc(100% - 20px), #444142), ",
@@ -22,18 +22,23 @@ const MeetCarmineCorino = () => {
             WebkitMaskImage:
               "linear-gradient(to bottom, black calc(100% - 20px), #444142), ",
             WebkitMaskComposite: "source-in",
+            filter: "saturate(1.25)",
           }}
           priority
         />
       </div>
 
-      <section className="relative w-screen bg-[#444142] lg:bg-transparent h-205 sm:h-200 lg:h-260 xl:h-250 2xl:h-310  lg:rounded-tl-[9rem] lg:-mt-64 z-30">
+      <section
+        id="about"
+        className="relative w-screen bg-[#444142] lg:bg-transparent h-205 sm:h-200 lg:h-260 xl:h-250 2xl:h-310  lg:rounded-tl-[9rem] lg:-mt-64 z-30 scroll-mt-32 lg:scroll-mt-24"
+      >
         <Image
           src={bgImage}
           alt="Meet Carmine Background"
           fill
           className="object-cover object-top-left hidden lg:block"
           priority
+          style={{ filter: "saturate(1.25)" }}
         />
 
         <div className=" h-[85%]">
@@ -61,7 +66,7 @@ const MeetCarmineCorino = () => {
                   ready to stop performing for institutions and start leading
                   with integrity.
                 </p>
-                <GenericButtonGrid className="relative max-w-120 lg:max-w-120 2xl:max-w-120">
+                <GenericButtonGrid className="relative max-w-120 lg:max-w-110 2xl:max-w-120">
                   <GenericButton text="Book Carmine to Speak" url="#" />
                   <GenericButton
                     text="Read Broken Dealer"

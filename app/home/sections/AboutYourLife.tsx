@@ -10,7 +10,7 @@ import icon5 from "@/app/home/images/icon-5.png";
 
 const AboutYourLife = () => {
   return (
-    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-510 sm:h-520 lg:h-260 xl:h-250 2xl:h-290   -mt-32 lg:-mt-64 z-30 mb-18">
+    <section className="bg-[#747676] px-4 rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden relative w-full h-510 sm:h-520 lg:h-260 xl:h-250 2xl:h-290   -mt-32 lg:-mt-52 z-30 mb-18">
       <div
         className="absolute inset-0 hidden lg:block"
         style={{

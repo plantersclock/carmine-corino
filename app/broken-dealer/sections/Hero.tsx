@@ -2,16 +2,17 @@ import Image from "next/image";
 import React from "react";
 import heroImage from "@/app/broken-dealer/images/book-hero-bg.png";
 import heroImageMobile from "@/app/broken-dealer/images/hero-mobile-bg.jpg";
+import bookImage from "@/app/broken-dealer/images/book.png";
 import GenericButton from "@/app/generic/components/GenericButton";
 
 const Hero = () => {
   return (
-    <section className=" block relative z-20 w-full aspect-auto lg:py-18 lg:aspect-[2560/2066] min-h-200 lg:max-h-[120vh] bg-[#050505]">
+    <section className=" block relative z-20 w-full aspect-auto lg:py-18 lg:aspect-[2560/2066] min-h-200 lg:max-h-[115vh] bg-[#050505]">
       <Image
         src={heroImage}
         alt="Hero background"
         fill
-        className="object-contain object-top hidden lg:block"
+        className="object-cover object-center hidden lg:block"
         priority
         placeholder="blur"
       />
@@ -25,10 +26,16 @@ const Hero = () => {
           placeholder="blur"
         />{" "}
       </div>
-      <div className="relative bg-[#050505] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full">
-        <div className="h-full grid lg:grid-cols-2 lg:gap-x-32 xl:gap-x-40 2xl:gap-x-58">
-          <div></div>
-          <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto ">
+      <div className="relative bg-[#050505] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full pr-6">
+        <div className="h-full grid lg:grid-cols-2 ">
+          <div className="hidden lg:flex items-center justify-center relative ">
+            <Image
+              src={bookImage}
+              alt="Broken Dealer book"
+              className="w-full max-w-md xl:max-w-lg contain object-center lg:scale-80 xl:scale-90 2xl:scale-100"
+            />
+          </div>
+          <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto lg:pl-24 xl:pl-24 2xl:pl-32 ">
             <div>
               <h2 className="text-white  text-heading max-w-xs md:max-w-md 2xl:max-w-2xl">
                 The Wealth Management Book

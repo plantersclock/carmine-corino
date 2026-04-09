@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from "@/app/generic/images/Logo.svg";
 import GenericButton from "./GenericButton";
@@ -10,8 +11,30 @@ import GradientBar from "./GradientBar";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const closeMenu = () => setMenuOpen(false);
+
+  const handleAboutClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    closeMenu();
+
+    const scrollToAbout = () => {
+      const el = document.getElementById("about");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      // Clear the hash so clicking again still works
+      window.history.replaceState(null, "", "/");
+    };
+
+    if (pathname === "/") {
+      scrollToAbout();
+    } else {
+      router.push("/");
+      // Wait for navigation, then scroll
+      setTimeout(scrollToAbout, 100);
+    }
+  };
 
   return (
     <>
@@ -32,10 +55,17 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               <Link
+                href="/"
+                onClick={handleAboutClick}
+                className="text-base font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
+              >
+                About
+              </Link>
+              <Link
                 href="/broken-dealer"
                 className="text-base  font-medium uppercase tracking-wider text-white hover:text-white/80 transition-colors"
               >
-                Book
+                Broken Dealer
               </Link>
               <Link
                 href="/speaking"
@@ -43,7 +73,12 @@ const Header = () => {
               >
                 Speaking
               </Link>
-              <GenericButton text="Contact" url="/contact" color="orange" />
+              <GenericButton
+                text="Contact"
+                url="/contact"
+                color="orange"
+                minWidth="150px"
+              />
             </nav>
 
             {/* Hamburger Button (mobile) */}
@@ -125,11 +160,18 @@ const Header = () => {
                   Home
                 </Link>
                 <Link
+                  href="/"
+                  onClick={handleAboutClick}
+                  className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                >
+                  About
+                </Link>
+                <Link
                   href="broken-dealer"
                   onClick={closeMenu}
                   className="text-xl font-medium uppercase tracking-widest text-white hover:text-white/80 transition-colors"
                 >
-                  Book
+                  Broken Dealer
                 </Link>
                 <Link
                   href="/speaking"
