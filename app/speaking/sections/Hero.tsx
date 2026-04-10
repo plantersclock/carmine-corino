@@ -6,7 +6,7 @@ import GenericButton from "@/app/generic/components/GenericButton";
 
 const Hero = () => {
   return (
-    <section className=" block relative z-20 w-full aspect-auto lg:aspect-2560/1856 min-h-200 lg:h-220 xl:h-260 2xl:h-380 lg:min-h-280 lg:max-h-[110vh] bg-[#5b5a5a]">
+    <section className=" block relative z-20 w-full aspect-auto lg:aspect-2560/1856 min-h-200 lg:h-220 xl:h-260 2xl:h-380 lg:min-h-280 lg:max-h-[110vh] bg-[#050505">
       <Image
         src={heroImage}
         alt="Hero background"
@@ -25,9 +25,9 @@ const Hero = () => {
         className=" block lg:hidden relative aspect-1179/1331"
         style={{
           maskImage:
-            "linear-gradient(to bottom, black calc(100% - 32px), transparent)",
+            "linear-gradient(to bottom, black calc(100% - 20px), #050505",
           WebkitMaskImage:
-            "linear-gradient(to bottom, black calc(100% - 32px), transparent)",
+            "linear-gradient(to bottom, black calc(100% - 20px), #050505)",
         }}
       >
         <Image
@@ -47,7 +47,7 @@ const Hero = () => {
           clipPath: "polygon(0 0, 45% 0, 60% 100%, 0 100%)",
         }}
       />
-      <div className="relative bg-[#5b5a5a] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full">
+      <div className="relative bg-[#050505] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full">
         <div className="h-full container mx-auto grid lg:grid-cols-2 lg:gap-x-32 xl:gap-x-40 2xl:gap-x-58">
           <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto">
             <div className="max-w-2xl lg:max-w-md 2xl:max-w-xl lg:mt-44 xl:mt-0">
@@ -55,7 +55,7 @@ const Hero = () => {
               <h3 className="text-smallersubheading text-white mt-6 max-w-md lg:max-w-none">
                 Keynotes for the Uncompromising Advisor
               </h3>
-              <p className="text-body text-white mt-18 lg:mt-6">
+              <p className="text-body text-white mt-8 lg:mt-6">
                 Some advisors are ready to break free from conflicted systems
                 that trade integrity for quotas. Others are scaling fast &mdash;
                 but know their business shouldn&apos;t demand every hour they

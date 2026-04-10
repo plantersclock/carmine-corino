@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import keynoteIcon1 from "@/app/speaking/images/keynote-icon-1.png";
+import keynoteIcon2 from "@/app/speaking/images/keynote-icon-2.png";
+import keynoteIcon3 from "@/app/speaking/images/keynote-icon-3.png";
 import GenericButton from "@/app/generic/components/GenericButton";
 
 interface Keynote {
@@ -41,7 +43,7 @@ const keynotes: Keynote[] = [
       "Building a business that reflects your values",
     ],
     afterBullets: "A roadmap for advisors ready to take the leap",
-    icon: keynoteIcon1,
+    icon: keynoteIcon2,
   },
   {
     title: "Leadership",
@@ -54,24 +56,41 @@ const keynotes: Keynote[] = [
       "Creating systems that run without you",
     ],
     afterBullets: "The mindset shift that separates producers from leaders",
-    icon: keynoteIcon1,
+    icon: keynoteIcon3,
   },
 ];
 
 const KeynotesUpd = () => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const pauseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const manualPause = useCallback(() => {
+    setPaused(true);
+    if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
+    pauseTimeout.current = setTimeout(() => setPaused(false), 30000);
+  }, []);
 
   const paginate = (dir: number) => {
     setDirection(dir);
     setIndex((prev) => (prev + dir + keynotes.length) % keynotes.length);
+    manualPause();
   };
 
   useEffect(() => {
+    if (paused) return;
     const interval = setInterval(() => {
-      paginate(1);
+      setDirection(1);
+      setIndex((prev) => (prev + 1) % keynotes.length);
     }, 10000);
     return () => clearInterval(interval);
+  }, [paused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
+    };
   }, []);
 
   const variants = {
@@ -106,7 +125,11 @@ const KeynotesUpd = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative mt-12">
+        <div
+          className="relative mt-12 "
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           {/* Left Arrow */}
           <button
             onClick={() => paginate(-1)}
@@ -161,7 +184,7 @@ const KeynotesUpd = () => {
                       alt={k.title}
                       width={400}
                       height={400}
-                      className="w-48 lg:w-130 h-auto lg:scale-80"
+                      className="w-40 lg:w-130 h-auto lg:scale-80"
                     />
                   </div>
 
@@ -171,13 +194,15 @@ const KeynotesUpd = () => {
                     <h4 className="text-smallersubheading lg:text-smallersubheading text-white mt-4 ">
                       {k.subtitle}
                     </h4>
-                    <p className="text-body text-white mt-6">{k.description}</p>
+                    <p className="text-base md:text-body text-white mt-6">
+                      {k.description}
+                    </p>
                     {k.bullets && (
                       <div className="mt-6">
                         <p className="text-body text-white">
                           Your audience walks away with:
                         </p>
-                        <ul className="text-body text-white mt-2 list-disc list-inside space-y-1">
+                        <ul className="text-base md:text-body text-white mt-2 list-disc list-inside space-y-1">
                           {k.bullets.map((bullet, i) => (
                             <li key={i}>{bullet}</li>
                           ))}

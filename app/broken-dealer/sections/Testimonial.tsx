@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
@@ -30,19 +30,36 @@ const testimonials = [
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const pauseTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const manualPause = useCallback(() => {
+    setPaused(true);
+    if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
+    pauseTimeout.current = setTimeout(() => setPaused(false), 30000);
+  }, []);
 
   const paginate = (dir: number) => {
     setDirection(dir);
     setIndex(
       (prev) => (prev + dir + testimonials.length) % testimonials.length,
     );
+    manualPause();
   };
 
   useEffect(() => {
+    if (paused) return;
     const interval = setInterval(() => {
-      paginate(1);
+      setDirection(1);
+      setIndex((prev) => (prev + 1) % testimonials.length);
     }, 8000);
     return () => clearInterval(interval);
+  }, [paused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeout.current) clearTimeout(pauseTimeout.current);
+    };
   }, []);
 
   const variants = {
@@ -63,7 +80,11 @@ const Testimonial = () => {
   const t = testimonials[index];
 
   return (
-    <section className="relative w-full h-170 sm:h-170 lg:h-150 xl:h-165 2xl:h-190 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-10  lg:-mt-30 2xl:-mt-35 z-20 bg-white">
+    <section
+      className="relative w-full h-170 sm:h-170 lg:h-150 xl:h-165 2xl:h-190 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-10  lg:-mt-30 2xl:-mt-35 z-20 bg-white"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="h-[70%]  mx-auto px-6 flex flex-col items-center justify-center">
         <div className="relative w-full flex items-center justify-center">
           {/* Left Arrow */}

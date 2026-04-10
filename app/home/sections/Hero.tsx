@@ -16,7 +16,7 @@ const Hero = () => {
           src={heroImage}
           alt="Hero background"
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-[60%_center] xl:object-[75%_center]"
           priority
           placeholder="blur"
         />
@@ -40,15 +40,22 @@ const Hero = () => {
           </div>
           <div className="grid lg:grid-cols-2 w-full">
             <div></div>
-            <div className="mx-auto w-full max-w-3xl lg:pl-12 xl:pl-22">
-              <h2 className="text-heading text-white -mb-2">
+            <div className="relative mx-auto w-full max-w-3xl lg:pl-12 xl:pl-22">
+              <div
+                className="absolute z-20 -inset-12 rounded-full pointer-events-none scale-120"
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, rgba(0,0,0,.20) 0%, transparent 70%)",
+                }}
+              />
+              <h2 className="relative z-30 text-heading text-white -mb-2">
                 Redefining <br /> Financial Advisory
               </h2>
-              <p className="my-8 max-w-md 2xl:max-w-lg text-body text-white/90">
+              <p className="relative z-30 my-8 max-w-md 2xl:max-w-lg text-body text-white">
                 Helping independent advisors create businesses that protect
                 their time, their families, and their future.
               </p>
-              <GenericButtonGrid className="max-w-50 2xl:max-w-75">
+              <GenericButtonGrid className="relative z-30 max-w-50 2xl:max-w-75">
                 <GenericButton text="Book A Call" url="/contact" />
                 <GenericButton
                   text="Cornerstone"
@@ -73,7 +80,7 @@ const Hero = () => {
             placeholder="blur"
           />
         </div>
-        <div className=" relative z-20 w-full h-170 sm:h-200  max-h-[110vh] -mt-35">
+        <div className=" relative z-20 w-full h-190 sm:h-200  max-h-[110vh] -mt-35">
           <Image
             src={heroImageMobileBG}
             alt="Hero background"
@@ -109,7 +116,7 @@ const Hero = () => {
                   Helping independent advisors create businesses that protect
                   their time, their families, and their future.
                 </p>
-                <GenericButtonGrid className="max-w-75">
+                <GenericButtonGrid className="max-w-120">
                   <GenericButton text="Book A Call" url="/contact" />
                   <GenericButton
                     text="Cornerstone"

@@ -30,7 +30,7 @@ const MeetCarmineCorino = () => {
 
       <section
         id="about"
-        className="relative w-screen bg-[#444142] lg:bg-transparent h-205 sm:h-200 lg:h-260 xl:h-250 2xl:h-310  lg:rounded-tl-[9rem] lg:-mt-64 z-30 scroll-mt-32 lg:scroll-mt-24"
+        className=" relative w-screen bg-[#444142] lg:bg-transparent min-h-200 xs:min-h-210 sm:min-h-190 md:min-h-200 h-auto pb-18 lg:pb-0 lg:h-260 xl:h-250 2xl:h-310  lg:rounded-tl-[9rem] lg:-mt-64 z-30 scroll-mt-32 lg:scroll-mt-24"
       >
         <Image
           src={bgImage}
@@ -41,7 +41,7 @@ const MeetCarmineCorino = () => {
           style={{ filter: "saturate(1.25)" }}
         />
 
-        <div className=" h-[85%]">
+        <div className=" h-auto lg:h-[85%]">
           <div className="container mx-auto h-full">
             <div className="grid lg:grid-cols-2 h-full w-full px-6 lg:px-0">
               <div className="hidden lg:block"></div>

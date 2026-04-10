@@ -7,7 +7,7 @@ import GenericButton from "@/app/generic/components/GenericButton";
 
 const HowCarmineCreatesChange = () => {
   return (
-    <section className="relative w-full rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-35 z-30 bg-white">
+    <section className="relative w-full rounded-tl-[3.5rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-32 lg:-mt-44 2xl:-mt-52 z-30 bg-white">
       <div className="container mx-auto px-20 py-18 md:py-24 xl:py-32">
         <h2 className="text-heading text-center">How Carmine Creates Change</h2>
         <div className="grid max-w-sm mx-auto lg:max-w-none lg:grid-cols-3 gap-24 xl:gap-x-32 mt-16 xl:mt-18">

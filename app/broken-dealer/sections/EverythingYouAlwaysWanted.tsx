@@ -62,7 +62,7 @@ const EverythingYouAlwaysWanted = () => {
                 Most financial advisors didn&apos;t sign up to be product
                 pushers.
               </h4>
-              <p className="text-body text-white mt-12 lg:mt-6">
+              <p className="text-body text-white mt-4 lg:mt-6">
                 Yet too many find themselves trapped in systems that prioritize
                 corporate sales over client outcomes &mdash; tight in the golden
                 handcuffs with no idea how to break free. Co-authors Carmine

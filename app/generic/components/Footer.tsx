@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import whiteLogo from "@/app/generic/images/white-logo.png";
+import whiteLogo from "@/app/generic/images/white-logo.svg";
 import GradientBar from "./GradientBar";
 
 const Footer = () => {

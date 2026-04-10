@@ -32,7 +32,7 @@ const Hero = () => {
             <Image
               src={bookImage}
               alt="Broken Dealer book"
-              className="w-full max-w-md xl:max-w-lg contain object-center lg:scale-80 xl:scale-90 2xl:scale-100"
+              className="w-full max-w-md xl:max-w-lg contain object-center lg:scale-70 xl:scale-80 2xl:scale-90"
             />
           </div>
           <div className="flex flex-col justify-center  mt-8 lg:mt-0 pl-12 pr-12 lg:pr-4 container mx-auto lg:pl-24 xl:pl-24 2xl:pl-32 ">
@@ -45,7 +45,7 @@ const Hero = () => {
                 <span className="text-theme-orange-500">Broken Dealer:</span>{" "}
                 Navigating the Path to Financial Advisor Independence
               </p>
-              <div className="max-w-60 mt-2">
+              <div className="max-w-120 lg:max-w-60 mt-2">
                 <GenericButton
                   text="BUY ON AMAZON NOW"
                   url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"

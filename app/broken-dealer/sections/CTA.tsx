@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import bookImage from "@/app/broken-dealer/images/book-image.png";
+import bookImage from "@/app/broken-dealer/images/cta-image.png";
 import GenericButton from "@/app/generic/components/GenericButton";
 
 const CTA = () => {
   return (
-    <section className="relative w-full rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-35 z-30 bg-white">
-      <div className="container mx-auto px-6  py-16 xl:py-24 h-full flex">
+    <section className="relative w-full rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-24 z-30 bg-white">
+      <div className="container mx-auto px-6  pt-16 lg:pb-0 xl:pt-24 h-full flex">
         <div className="flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-24  w-full">
           {/* Text Content */}
           <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-xl  ">
@@ -23,7 +23,7 @@ const CTA = () => {
               &mdash; and gives you the courage to do what you already know is
               right.
             </p>
-            <div className="mt-10 max-w-50">
+            <div className="mt-10 max-w-120 lg:max-w-50">
               <GenericButton
                 text="Buy Now"
                 url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
@@ -35,19 +35,11 @@ const CTA = () => {
           </div>
           {/* Book Image */}
 
-          <div
-            className="h-full w-full xl:w-[50%] right-0 flex flex-col items-center justify-center sm:-mr-2  md:ml-28 lg:ml-36 xl:-mr-10 xl:ml-10 2xl:-mr-20 2xl:ml-20"
-            style={{
-              maskImage:
-                "linear-gradient(to right, black calc(100% - 24px), transparent)",
-              WebkitMaskImage:
-                "linear-gradient(to right, black calc(100% - 24px), transparent)",
-            }}
-          >
+          <div className="w-full relative aspect-square  xl:w-[130%] right-0 flex flex-col items-center justify-end lg:justify-end self-end  lg:pt-32 xl:pt-0 lg:-mt-48 xl:min-h-170">
             <Image
               src={bookImage}
               alt="Broken Dealer book"
-              className="w-full h-auto "
+              className="xl:w-150 xl:w-full h-auto object-cover xl:object-contain"
             />
           </div>
         </div>
