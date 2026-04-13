@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import logo from "@/app/generic/images/logo.svg";
+import logo from "@/app/generic/images/Logo.svg";
 import GenericButton from "./GenericButton";
 import GradientBar from "./GradientBar";
 
