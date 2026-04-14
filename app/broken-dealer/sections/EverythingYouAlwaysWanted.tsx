@@ -15,18 +15,18 @@ const EverythingYouAlwaysWanted = () => {
         placeholder="blur"
       /> */}
 
-      <div className="block lg:hidden relative z-20 aspect-1179/518">
+      <div className="block lg:hidden relative z-20 aspect-1179/518 lg:rounded-tl-[5rem] overflow-hidden">
         <Image
           src={everythingImageMobile}
           alt="Everything you always wanted background"
           fill
-          className="object-contain object-top-left "
+          className="object-contain object-top-left"
           priority
           placeholder="blur"
         />
       </div>
 
-      <div className="hidden lg:block relative z-20 aspect-3704/1143 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden">
+      <div className=" hidden lg:block relative z-20 aspect-3704/1143 rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] overflow-hidden">
         <Image
           src={everythingImage}
           alt="Everything you always wanted background"
@@ -38,7 +38,7 @@ const EverythingYouAlwaysWanted = () => {
       </div>
 
       <div
-        className="block z-20 relative w-full pb-50 lg:pb-100 2xl:pb-70 pt-14 -mt-10"
+        className="bg-black block z-20 relative w-full pb-50 lg:pb-100 2xl:pb-70 pt-14 -mt-10"
         style={{
           background:
             "linear-gradient(to bottom, transparent 0px, #250F0F 20px)",

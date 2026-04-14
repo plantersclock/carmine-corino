@@ -88,17 +88,18 @@ const Footer = () => {
               >
                 Speaking
               </Link>
+
+              <Link
+                href="/contact?type=general"
+                className="text-footerlink text-white/70 hover:text-white transition-colors"
+              >
+                Book Carmine
+              </Link>
               <Link
                 href="/speaking"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Select Your Experience
-              </Link>
-              <Link
-                href="#"
-                className="text-footerlink text-white/70 hover:text-white transition-colors"
-              >
-                Book Carmine
               </Link>
             </div>
 

@@ -133,7 +133,7 @@ const KeynotesUpd = () => {
           {/* Left Arrow */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 top-0 z-10 flex items-center justify-center w-10 h-42 lg:w-14 lg:h-full cursor-pointer"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-42 lg:w-14 lg:h-80 cursor-pointer"
             aria-label="Previous keynote"
           >
             <div className="absolute inset-0 rounded-r-[2.5rem] bg-[#e7e7e7] hover:bg-[#c4c4c4]" />
@@ -150,7 +150,7 @@ const KeynotesUpd = () => {
           {/* Right Arrow */}
           <button
             onClick={() => paginate(1)}
-            className="absolute right-0 top-0 z-10 flex items-center justify-center w-10 h-42 lg:w-14 lg:h-full cursor-pointer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center w-10 h-42 lg:w-14 lg:h-80 cursor-pointer"
             aria-label="Next keynote"
           >
             <div className="absolute inset-0 rounded-l-[2.5rem] bg-[#e7e7e7] hover:bg-[#c4c4c4]" />
@@ -176,20 +176,31 @@ const KeynotesUpd = () => {
                 exit="exit"
                 transition={{ duration: 0.35, ease: "easeInOut" }}
               >
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-                  {/* Icon */}
-                  <div className="lg:w-1/2 flex justify-center h-full">
+                <div className="relative flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+                  {/* Mobile background icon */}
+                  <div className="lg:hidden absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                    <Image
+                      src={k.icon}
+                      alt=""
+                      width={400}
+                      height={400}
+                      className="w-80 h-auto"
+                    />
+                  </div>
+
+                  {/* Desktop icon */}
+                  <div className="hidden lg:flex lg:w-1/2 justify-center h-full">
                     <Image
                       src={k.icon}
                       alt={k.title}
                       width={400}
                       height={400}
-                      className="w-40 lg:w-130 h-auto lg:scale-80"
+                      className="w-130 h-auto lg:scale-80"
                     />
                   </div>
 
                   {/* Text */}
-                  <div className="flex flex-col lg:w-1/2 px-4">
+                  <div className="relative flex flex-col lg:w-1/2 px-4">
                     <h3 className="text-heading text-white">{k.title}</h3>
                     <h4 className="text-smallersubheading lg:text-smallersubheading text-white mt-4 ">
                       {k.subtitle}
@@ -217,7 +228,7 @@ const KeynotesUpd = () => {
                     <div className="mt-8 max-w-70">
                       <GenericButton
                         text="Book This Keynote"
-                        url="/contact"
+                        url="/contact?type=general"
                         color="orange"
                         minWidth="100%"
                       />

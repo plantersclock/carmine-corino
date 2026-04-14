@@ -67,25 +67,26 @@ const MeetCarmineCorino = () => {
                   with integrity.
                 </p>
                 <GenericButtonGrid className="relative max-w-120 lg:max-w-110 2xl:max-w-120">
-                  <GenericButton text="Book Carmine to Speak" url="#" />
+                  <GenericButton text="Book Carmine to Speak" url="/speaking" />
                   <GenericButton
                     text="Read Broken Dealer"
                     color="gray"
-                    url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
-                    newTab
+                    url="/broken-dealer"
                   />
                   <div className="contents sm:hidden">
                     <GenericButton
                       text="Join the Collective"
                       color="gray"
-                      url="#"
+                      url="https://www.cornerstoneplanninggroup.com/partner-with-us"
+                      newTab
                     />
                   </div>
                   <div className="contents max-sm:hidden">
                     <GenericButton
                       text="Join the Advisor Collective"
                       color="gray"
-                      url="#"
+                      url="https://www.cornerstoneplanninggroup.com/partner-with-us"
+                      newTab
                     />
                   </div>
                 </GenericButtonGrid>

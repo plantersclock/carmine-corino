@@ -5,11 +5,11 @@ import GenericButton from "@/app/generic/components/GenericButton";
 
 const CTA = () => {
   return (
-    <section className="relative w-full rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-24 z-30 bg-white">
-      <div className="container mx-auto px-6  pt-16 lg:pb-0 xl:pt-24 h-full flex">
+    <section className="relative w-full rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] -mt-30 2xl:-mt-24 z-30 bg-linear-to-b from-[#444242] to-[#615E61]">
+      <div className="container mx-auto px-6  pt-16 lg:pb-0 xl:pt-12 h-full flex">
         <div className="flex flex-col xl:flex-row items-center xl:items-start gap-12 xl:gap-24  w-full">
           {/* Text Content */}
-          <div className="flex flex-col max-w-xl lg:max-w-3xl xl:max-w-xl  ">
+          <div className="flex xl:pb-12 flex-col max-w-xl lg:max-w-3xl xl:max-w-5xl text-white ">
             <h2 className="text-heading">
               If You&apos;re Thinking About Leaving...{" "}
               <span className="text-theme-orange-500">Read This First</span>
@@ -35,7 +35,7 @@ const CTA = () => {
           </div>
           {/* Book Image */}
 
-          <div className="w-full relative aspect-square  xl:w-[130%] right-0 flex flex-col items-center justify-end lg:justify-end self-end  lg:pt-32 xl:pt-0 lg:-mt-48 xl:min-h-170">
+          <div className="w-full relative aspect-square  xl:w-[100%] right-0 flex flex-col items-center justify-end lg:justify-end self-end  lg:pt-32 xl:pt-0 lg:-mt-48 xl:min-h-100">
             <Image
               src={bookImage}
               alt="Broken Dealer book"

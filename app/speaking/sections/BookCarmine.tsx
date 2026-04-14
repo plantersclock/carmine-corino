@@ -28,7 +28,7 @@ const BookCarmine = () => {
               <div className="max-w-100 mt-2">
                 <GenericButton
                   text="Start the Conversation"
-                  url="/contact"
+                  url="/contact?type=general"
                   color="orange"
                   minWidth="100%"
                 />

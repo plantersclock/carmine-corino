@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <div className="mt-24 lg:mt-32 xl:mt-12 bg-[#050505] lg:bg-transparent">
+      <div className="mt-24 lg:mt-8 xl:mt-4 bg-[#050505] lg:bg-transparent">
         <FeaturedOn />
       </div>
       <KeynotesUpd />

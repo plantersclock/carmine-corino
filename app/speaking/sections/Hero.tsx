@@ -21,24 +21,22 @@ const Hero = () => {
             "linear-gradient(to top, black calc(100% - 32px), transparent)",
         }}
       />
-      <div
-        className=" block lg:hidden relative aspect-1179/1331"
-        style={{
-          maskImage:
-            "linear-gradient(to bottom, black calc(100% - 20px), #050505",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, black calc(100% - 20px), #050505)",
-        }}
-      >
+      <div className=" block lg:hidden relative aspect-1179/1331">
         <Image
           src={heroImageMobile}
           alt="Hero background"
           fill
-          className="object-contain object-top block lg:hidden"
+          className="object-cover object-top block lg:hidden "
           priority
           placeholder="blur"
-          style={{ filter: "saturate(1.4)" }}
-        />{" "}
+        />
+        {/* Solid black quadrilateral covering bottom — taller on the right */}
+        <div
+          className="absolute inset-0 bg-black pointer-events-none lg:hidden"
+          style={{
+            clipPath: "polygon(0 calc(100%), 100% 90%, 100% 100%, 0 100%)",
+          }}
+        />
       </div>
       {/* Diagonal sliced semi-opaque black overlay (desktop only) */}
       <div
@@ -77,7 +75,7 @@ const Hero = () => {
               <div className="max-w-90 mt-12 lg:mt-8">
                 <GenericButton
                   text="Elevate Your Event"
-                  url="/contact"
+                  url="/contact?type=general"
                   color="orange"
                   minWidth="100%"
                 />

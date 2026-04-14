@@ -55,10 +55,10 @@ const Hero = () => {
                 Helping independent advisors create businesses that protect
                 their time, their families, and their future.
               </p>
-              <GenericButtonGrid className="relative z-30 max-w-50 2xl:max-w-75">
+              <GenericButtonGrid className="relative z-30 max-w-60 2xl:max-w-80">
                 <GenericButton text="Book A Call" url="/contact" />
                 <GenericButton
-                  text="Cornerstone"
+                  text="Visit Cornerstone"
                   color="blue"
                   newTab
                   url="https://www.cornerstoneplanninggroup.com/"
@@ -119,7 +119,7 @@ const Hero = () => {
                 <GenericButtonGrid className="max-w-120">
                   <GenericButton text="Book A Call" url="/contact" />
                   <GenericButton
-                    text="Cornerstone"
+                    text="Visit Cornerstone"
                     color="blue"
                     newTab
                     url="https://www.cornerstoneplanninggroup.com/"

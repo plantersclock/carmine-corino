@@ -123,7 +123,7 @@ const AboutYourLife = () => {
                   </p>
                 </div>
               </div>
-              <p className="text-center text-body text-white max-w-4xl 2xl:max-w-6xl pb-40 sm:pb-0">
+              <p className="text-center text-smallersubheading text-white max-w-4xl 2xl:max-w-6xl pb-40 sm:pb-0">
                 Carmine works with advisors who feel held back—whether by the
                 golden handcuffs of big banking or by the ceilings they’ve built
                 for themselves. His financial advisor coaching helps them

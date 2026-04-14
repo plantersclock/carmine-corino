@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import heroImage from "@/app/broken-dealer/images/book-hero-bg.png";
-import heroImageMobile from "@/app/broken-dealer/images/hero-mobile-bg.jpg";
+import bottomBar from "@/app/broken-dealer/images/bottom-bar.jpg";
 import bookImage from "@/app/broken-dealer/images/book.png";
 import GenericButton from "@/app/generic/components/GenericButton";
 
@@ -16,15 +16,27 @@ const Hero = () => {
         priority
         placeholder="blur"
       />
-      <div className="mt-4 block lg:hidden relative aspect-1000/1070">
-        <Image
-          src={heroImageMobile}
-          alt="Hero background"
-          fill
-          className="object-contain object-top block lg:hidden"
-          priority
-          placeholder="blur"
-        />{" "}
+      <div className="mt-4 block lg:hidden relative aspect-1000/1070 overflow-hidden">
+        {/* Bottom bar */}
+        <div className="absolute bottom-0 left-0 w-full z-0">
+          <Image
+            src={bottomBar}
+            alt=""
+            className="w-full h-auto"
+            priority
+            placeholder="blur"
+          />
+        </div>
+        {/* Book image centered */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 pt-12 pl-[5%]">
+          <Image
+            src={bookImage}
+            alt="Broken Dealer book"
+            className="w-[61%] h-auto"
+            priority
+            placeholder="blur"
+          />
+        </div>
       </div>
       <div className="relative bg-[#050505] lg:bg-transparent pb-24 lg:pb-0 block lg:absolute lg:top-0 lg:left-0 w-full h-full pr-6">
         <div className="h-full grid lg:grid-cols-2 ">

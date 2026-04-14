@@ -14,23 +14,18 @@ const ItCoversEverything = () => {
         priority
         placeholder="blur"
       />
-      <Image
-        src={itCoversMobileImages}
-        alt="Chain background"
-        fill
-        className="object-cover object-top-left block lg:hidden"
-        priority
-        placeholder="blur"
-      />
-      <div className="bg-black grow mt-50 overflow-none"></div>
-      <div
-        className="absolute top-0 left-0 w-full h-full opacity-50 md:hidden"
-        style={{
-          background: "linear-gradient(to right, transparent 0%, black 25%)",
-        }}
-      />
+      <div className="absolute inset-0 bg-black overflow-hidden rounded-tl-[3.75rem] lg:hidden">
+        <Image
+          src={itCoversMobileImages}
+          alt="Chain background"
+          fill
+          className="object-cover object-top-left block lg:hidden -translate-y-2.5"
+          priority
+          placeholder="blur"
+        />
+      </div>
 
-      <div className="absolute h-full w-full top-0 left-0">
+      <div className="absolute h-full w-full top-0 left-0 bg-black/40 rounded-tl-[3.75rem]">
         <div className="container mx-auto h-full px-6 -mt-12">
           <div className="flex h-full items-center justify-end">
             <div className="flex flex-col w-full md:w-[66%]  lg:w-[50%] ">

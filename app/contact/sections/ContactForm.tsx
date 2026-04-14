@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import bgImage from "@/app/contact/images/contact-bg.jpg";
 import GenericButton from "@/app/generic/components/GenericButton";
 
 type InquiryType = "advisors" | "general";
 
 const ContactForm = () => {
-  const [inquiryType, setInquiryType] = useState<InquiryType>("advisors");
+  const searchParams = useSearchParams();
+  const initialType: InquiryType =
+    searchParams.get("type") === "general" ? "general" : "advisors";
+  const [inquiryType, setInquiryType] = useState<InquiryType>(initialType);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

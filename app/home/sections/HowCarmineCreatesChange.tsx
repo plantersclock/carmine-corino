@@ -26,7 +26,7 @@ const HowCarmineCreatesChange = () => {
               from traditional thinking and take control of what comes next.
             </p>
             <div className="w-full self-end mt-6">
-              <GenericButton text="Book Carmine" url="#" minWidth="100%" />
+              <GenericButton text="Book Carmine" url="/speaking" minWidth="100%" />
             </div>
           </div>
 
@@ -48,8 +48,7 @@ const HowCarmineCreatesChange = () => {
             <div className="w-full self-end pt-4 lg:pt-0">
               <GenericButton
                 text="Read the Book"
-                url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
-                newTab
+                url="/broken-dealer"
                 minWidth="100%"
               />
             </div>
@@ -70,7 +69,7 @@ const HowCarmineCreatesChange = () => {
               that push advisors to show up as leaders&mdash;not producers.
             </p>
             <div className="w-full self-end pt-4 lg:pt-0">
-              <GenericButton text="Partner With Us" url="#" minWidth="100%" />
+              <GenericButton text="Partner With Us" url="https://www.cornerstoneplanninggroup.com/partner-with-us" newTab minWidth="100%" />
             </div>
           </div>
         </div>
