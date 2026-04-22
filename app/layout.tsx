@@ -13,6 +13,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Carmine Corino",
   description: "Redefining Financial Advisory",
+  icons: {
+    icon: "/Favicon.png",
+  },
 };
 
 export default function RootLayout({

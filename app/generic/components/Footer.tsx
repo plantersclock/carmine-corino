@@ -96,7 +96,7 @@ const Footer = () => {
                 Book Carmine
               </Link>
               <Link
-                href="/speaking"
+                href="/speaking#select-a-keynote"
                 className="text-footerlink text-white/70 hover:text-white transition-colors"
               >
                 Select Your Experience

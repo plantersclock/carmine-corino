@@ -112,7 +112,7 @@ const KeynotesUpd = () => {
 
   return (
     <div className="bg-white pt-4 lg:-mt-60 relative z-40">
-      <section className="relative w-full bg-black rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] py-16 lg:py-24">
+      <section id="select-a-keynote" className="relative w-full bg-black rounded-tl-[3.75rem] lg:rounded-tl-[5rem] xl:rounded-tl-[7rem] 2xl:rounded-tl-[9rem] py-16 lg:py-24 scroll-mt-24">
         {/* Header */}
         <div className="text-center lg:mb-18">
           <h2 className="text-heading text-white">Select A Keynote</h2>
@@ -184,7 +184,7 @@ const KeynotesUpd = () => {
                       alt=""
                       width={400}
                       height={400}
-                      className="w-80 h-auto"
+                      className="w-64 h-auto"
                     />
                   </div>
 
