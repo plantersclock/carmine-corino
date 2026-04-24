@@ -20,6 +20,10 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -29,12 +33,35 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Hook up Resend
-    const payload = {
-      ...formData,
-      inquiryType,
-    };
-    console.log("Form submitted:", payload);
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, inquiryType }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(
+        err instanceof Error ? err.message : "Something went wrong.",
+      );
+    }
   };
 
   return (
@@ -173,12 +200,24 @@ const ContactForm = () => {
             </div>
 
             {/* Submit Button */}
-            <GenericButton
-              text="Submit"
-              type="submit"
-              color="orange"
-              minWidth="160px"
-            />
+            <div className="flex flex-col items-start gap-3">
+              <GenericButton
+                text={status === "submitting" ? "Sending..." : "Submit"}
+                type="submit"
+                color="orange"
+                minWidth="160px"
+              />
+              {status === "success" && (
+                <p className="text-sm font-semibold uppercase tracking-widest text-green-700">
+                  Thanks — your message has been sent.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-sm font-semibold uppercase tracking-widest text-red-700">
+                  {errorMessage || "Something went wrong. Please try again."}
+                </p>
+              )}
+            </div>
           </form>
         </div>
       </div>
