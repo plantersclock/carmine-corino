@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./generic/components/Header";
 import Footer from "./generic/components/Footer";
 import NextTopLoader from "nextjs-toploader";
+import { Analytics } from "@vercel/analytics/next";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
