@@ -57,11 +57,18 @@ const Hero = () => {
                 <span className="text-theme-orange-500">Broken Dealer:</span>{" "}
                 Navigating the Path to Financial Advisor Independence
               </p>
-              <div className="max-w-120 lg:max-w-60 mt-2">
+              <div className="max-w-120 lg:max-w-60 mt-2 flex flex-col gap-3">
                 <GenericButton
                   text="BUY ON AMAZON NOW"
                   url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
                   color="orange"
+                  newTab
+                  minWidth="100%"
+                />
+                <GenericButton
+                  text="FREE FIRST CHAPTER"
+                  url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
+                  color="blue"
                   newTab
                   minWidth="100%"
                 />

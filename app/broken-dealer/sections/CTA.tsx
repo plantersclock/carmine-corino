@@ -23,11 +23,18 @@ const CTA = () => {
               &mdash; and gives you the courage to do what you already know is
               right.
             </p>
-            <div className="mt-8 max-w-120 lg:max-w-50">
+            <div className="mt-8 max-w-120 lg:max-w-70 flex flex-col gap-3">
               <GenericButton
                 text="Buy Now"
                 url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
                 color="orange"
+                newTab
+                minWidth="100%"
+              />
+              <GenericButton
+                text="FREE FIRST CHAPTER"
+                url="https://www.amazon.com/Broken-Dealer-Navigating-Financial-Independence/dp/1642256552"
+                color="blue"
                 newTab
                 minWidth="100%"
               />
