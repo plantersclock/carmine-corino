@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       {/* DESKTOP */}
-      <section className="hidden lg:block relative z-20 w-full h-300 lg:h-230 xl:h-270 2xl:h-420 min-h-270 max-h-[115vh] ">
+      <section className="hidden lg:block relative z-20 w-full h-300 lg:h-230 xl:h-270 2xl:h-420 min-h-220 2xl:min-h-270 max-h-[115vh] ">
         <Image
           src={heroImage}
           alt="Hero background"
